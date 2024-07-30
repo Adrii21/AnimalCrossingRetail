@@ -23,28 +23,24 @@ Este proyecto es un e-commerce ficticio que muestra productos del juego Animal C
    source env/bin/activate
 
 Instala las dependencias:
-
-   ```bash
-   pip install -r requirements.txt
-
+   `pip install -r requirements.txt`
+   
 **Configura el archivo settings.py:**
 
 Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
-
-   ```bash
-   DATABASES = {
-       'default': {
-           'ENGINE': 'djongo',
-           'NAME': 'products',
-       }
-   }
+  
+    `DATABASES = {
+          'default': {
+              'ENGINE': 'djongo',
+              'NAME': 'products',
+          }
+      }`
 
 Realiza las migraciones:
 
-bash
-
-python manage.py makemigrations
-python manage.py migrate
+    ```bash
+      python manage.py makemigrations
+      python manage.py migrate
 
 Inicia el servidor de desarrollo:
 
