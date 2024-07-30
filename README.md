@@ -15,70 +15,63 @@ Este proyecto es un e-commerce ficticio que muestra productos del juego Animal C
 
 ### Backend
 
-1. **Crea un entorno virtual y activa:**
+1. **Crea un entorno virtual y activa**
 
    ```bash
    cd backend
    virtualenv env
    source env/bin/activate
 
-Instala las dependencias:
+2. **Instala las dependencias**
    `pip install -r requirements.txt`
    
-**Configura el archivo settings.py:**
+3. **Configura el archivo settings.py**
 
 Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
   
-    `DATABASES = {
+    DATABASES = {
           'default': {
               'ENGINE': 'djongo',
               'NAME': 'products',
           }
-      }`
+      }
 
-Realiza las migraciones:
+4. **Realiza las migraciones**
 
-    ```bash
       python manage.py makemigrations
       python manage.py migrate
 
-Inicia el servidor de desarrollo:
+5. **Inicia el servidor de desarrollo**
 
-bash
+       python manage.py runserver
 
-    python manage.py runserver
+###Frontend
 
-Frontend
-
-    Navega al directorio frontend:
+1.**Navega al directorio frontend**
 
     bash
+      cd frontend
 
-cd frontend
+2. **Instala las dependencias**
 
-Instala las dependencias:
+      bash
+         npm install
 
-bash
+3. **Inicia el servidor de desarrollo**
 
-npm install
+         bash
+          npm start
 
-Inicia el servidor de desarrollo:
+###Scripts
 
-bash
+1. **Scraper**
 
-    npm start
-
-Scripts
-
-    Scraper
-
-    El script scraper.py obtiene los datos de los productos y los publica en Kafka.
+El script scraper.py obtiene los datos de los productos y los publica en Kafka.
 
     bash
+       python scraper.py
 
-python scraper.py
-
-Consumidor de Kafka
+2. **Consumidor de Kafka**
 
 El script kafka_consumer.py consume los mensajes de Kafka y los almacena en MongoDB.
 
@@ -86,22 +79,21 @@ bash
 
     python kafka_consumer.py
 
-Docker
-Construir y Ejecutar Contenedores
+###Docker
+1. **Construir y Ejecutar Contenedores**
 
-    Para construir y ejecutar todos los contenedores:
+    1. **Para construir y ejecutar todos los contenedores**
 
     Desde la raíz del proyecto:
 
-    bash
+       bash
+         docker-compose up --build
 
-docker-compose up --build
+2. **Para detener los contenedores**
 
-Para detener los contenedores:
+       bash
 
-bash
-
-    docker-compose down
+          docker-compose down
 
 Uso
 
