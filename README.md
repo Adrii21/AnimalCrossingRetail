@@ -74,15 +74,14 @@ El script kafka_consumer.py consume los mensajes de Kafka y los almacena en Mong
 
 ## Docker
 
- ###Construir y Ejecutar Contenedores**
+ ###Construir y Ejecutar Contenedores
+ Desde la raíz del proyecto:
 
    1. **Para construir y ejecutar todos los contenedores**
 
-   Desde la raíz del proyecto:
+            docker-compose up --build
 
-         docker-compose up --build
-
-2. **Para detener los contenedores**
+3. **Para detener los contenedores**
 
           docker-compose down
 
