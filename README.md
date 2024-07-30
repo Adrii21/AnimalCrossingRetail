@@ -45,7 +45,7 @@ Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
 
        python manage.py runserver
 
-###Frontend
+### Frontend
 
 1.**Navega al directorio frontend**
 
@@ -62,7 +62,7 @@ Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
          bash
           npm start
 
-###Scripts
+### Scripts
 
 1. **Scraper**
 
@@ -80,11 +80,11 @@ bash
     python kafka_consumer.py
 
 ###Docker
-1. **Construir y Ejecutar Contenedores**
+ **Construir y Ejecutar Contenedores**
 
-    1. **Para construir y ejecutar todos los contenedores**
+   1. **Para construir y ejecutar todos los contenedores**
 
-    Desde la raíz del proyecto:
+   Desde la raíz del proyecto:
 
        bash
          docker-compose up --build
@@ -97,5 +97,5 @@ bash
 
 Uso
 
-    Backend: Accede a la API en http://127.0.0.1:8000/api/products/
-    Frontend: Accede a la aplicación web en http://localhost:3000/
+   **Backend: Accede a la API en http://127.0.0.1:8000/api/products/
+   Frontend: Accede a la aplicación web en http://localhost:3000/**
