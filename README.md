@@ -11,8 +11,6 @@ Este proyecto es un e-commerce ficticio que muestra productos del juego Animal C
 - **Contenedores**: Docker
 - **Entorno Virtual**: `virtualenv`
 
-## Estructura del Proyecto
-
 ## Instalación
 
 ### Backend
@@ -23,24 +21,23 @@ Este proyecto es un e-commerce ficticio que muestra productos del juego Animal C
    cd backend
    virtualenv env
    source env/bin/activate
-   Instala las dependencias:
 
-bash
+Instala las dependencias:
 
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
-Configura el archivo settings.py:
+**Configura el archivo settings.py:**
 
 Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
 
-python
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'products',
-    }
-}
+   ```bash
+   DATABASES = {
+       'default': {
+           'ENGINE': 'djongo',
+           'NAME': 'products',
+       }
+   }
 
 Realiza las migraciones:
 
