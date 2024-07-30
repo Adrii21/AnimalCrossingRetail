@@ -47,19 +47,16 @@ Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
 
 ### Frontend
 
-1.**Navega al directorio frontend**
+1. **Navega al directorio frontend**
 
-    bash
-      cd frontend
+         cd frontend
 
-2. **Instala las dependencias**
+3. **Instala las dependencias**
 
-      bash
          npm install
 
-3. **Inicia el servidor de desarrollo**
+4. **Inicia el servidor de desarrollo**
 
-         bash
           npm start
 
 ### Scripts
@@ -68,34 +65,28 @@ Asegúrate de que la configuración de DATABASES esté apuntando a MongoDB:
 
 El script scraper.py obtiene los datos de los productos y los publica en Kafka.
 
-    bash
        python scraper.py
 
 2. **Consumidor de Kafka**
-
 El script kafka_consumer.py consume los mensajes de Kafka y los almacena en MongoDB.
-
-bash
 
     python kafka_consumer.py
 
-###Docker
- **Construir y Ejecutar Contenedores**
+## Docker
+
+ ###Construir y Ejecutar Contenedores**
 
    1. **Para construir y ejecutar todos los contenedores**
 
    Desde la raíz del proyecto:
 
-       bash
          docker-compose up --build
 
 2. **Para detener los contenedores**
-
-       bash
 
           docker-compose down
 
 Uso
 
-   **Backend: Accede a la API en http://127.0.0.1:8000/api/products/
-   Frontend: Accede a la aplicación web en http://localhost:3000/**
+   - Backend: Accede a la API en http://127.0.0.1:8000/api/products/
+   - Frontend: Accede a la aplicación web en http://localhost:3000/
